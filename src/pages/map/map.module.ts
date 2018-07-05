@@ -7,7 +7,10 @@ import { MapPage } from './map';
     MapPage,
   ],
   imports: [
+    
     IonicPageModule.forChild(MapPage),
-  ],
+
+  ]
 })
-export class MapPageModule {}
+export class MapPageModule { }
+

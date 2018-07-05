@@ -1,34 +1,32 @@
+/// <reference path="../../../node_modules/bingmaps/types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
 import { Component } from '@angular/core';
+import { MarkerTypeId, IMapOptions } from 'angular-maps';
 
-/**
- * Generated class for the MapComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
+
 @Component({
   selector: 'app-bing-map',
   templateUrl: 'map.component.html'
 })
 export class MapComponent {
 
-  text: string;
+  map;
 
   constructor() {
-    console.log('Hello MapComponent Component');
-    this.text = 'Hello World';
+
   }
 
-  ngOnInit() {
-    if (typeof Microsoft !== 'undefined') {
-        console.log('BingMapComponent.ngOnInit');
-        this.loadMap();
-    }
+   _markerTypeId = MarkerTypeId
+  // a little trick so we can use enums in the template...
+
+   _options: IMapOptions = {
+    disableBirdseye: false,
+    disableStreetside: false,
+    navigationBarMode: 1
+  };
+  // for all available options for the various components, see IInfoWindowOptions, IInfoWindowAction, IMarkerOptions, IMapOptions, IMarkerIconInfo
+
+   _click() {
+    console.log("hello world...");
+  }
 }
 
-loadMap() {
-  this.map = new Microsoft.Maps.Map(document.getElementById('mapId'), {
-      credentials: 'Your Bing Maps Key Here',
-  });
-}
-}
