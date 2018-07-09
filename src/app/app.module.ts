@@ -9,6 +9,7 @@ import { HomePage } from "../pages/home/home";
 import { BingMapsLoader } from "../providers/bing-maps/bing-map.service";
 import { MapPage } from "../pages/map/map";
 import { ComponentsModule } from "../components/components.module";
+import { HttpModule } from "@angular/http";
 // import {
 //   MapModule,
 //   MapAPILoader,
@@ -25,13 +26,14 @@ import { ComponentsModule } from "../components/components.module";
     BrowserModule,
     IonicModule.forRoot(MyApp),
     ComponentsModule,
+    HttpModule,
   
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    MapPage
+    MapPage, 
   ],
   providers: [
     StatusBar,
