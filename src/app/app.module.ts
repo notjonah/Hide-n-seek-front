@@ -11,11 +11,13 @@ import { LoginPage } from "../pages/login/login";
 import { LandingPage } from "../pages/landing/landing";
 import { BingMapsLoader } from "../providers/bing-maps/bing-map.service";
 import { MapPage } from "../pages/map/map";
+import { PaymentPage } from "../pages/payment/payment";
 import { ComponentsModule } from "../components/components.module";
 import { TimerComponent } from "../pages/timer/timer";
 
 
 import { HttpModule } from "@angular/http";
+
 // import {
 //   MapModule,
 //   MapAPILoader,
@@ -33,13 +35,21 @@ import { HttpModule } from "@angular/http";
     RegistrationPage, 
     LoginPage, 
     LandingPage, 
-    MapPage
+    MapPage,
+    PaymentPage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
     ComponentsModule,
     HttpModule,
+    IonicModule.forRoot(MyApp, {}, { links: [
+      { component: LoginPage, name: "login", segment: "login"},
+      { component: HomePage, name: "home", segment: "home" },
+      { component: LandingPage, name: "landing", segment: "landing"},
+      { component: PaymentPage, name: "payment", segment: "payment"},
+      { component: MapPage, name: "map", segment: "map"},
+      { component: RegistrationPage, name: "registration", segment: "registration" }]})
+
   
   ],
   bootstrap: [IonicApp],
@@ -51,7 +61,8 @@ import { HttpModule } from "@angular/http";
     RegistrationPage,
     LoginPage,
     LandingPage,
-    MapPage
+    MapPage, 
+    PaymentPage,
   ],
   providers: [
     StatusBar,

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
-
+import { PaymentPage } from '../payment/payment';
 import { LandingPage } from '../landing/landing';
 
      
@@ -99,10 +99,11 @@ import { LandingPage } from '../landing/landing';
          // }
        }
 
-    navigateToLanding() {
-        console.log("Navigating...");
-        this.navCtrl.push(LandingPage);
-    }
-  }
 
+    navigateToLanding() {
+        console.log("Navigating...")
+        this.navCtrl.push(LandingPage)
+    }
+
+    }
 

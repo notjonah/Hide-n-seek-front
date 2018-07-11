@@ -1,40 +1,42 @@
-<!--
-  Generated template for the LoginPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-
+    <ion-navbar>
+        <ion-title style="text-align: center; font-size: 100px; font-family: 'Sigmar One', cursive;">
+            Login
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
 
-<ion-content padding>
-    <ion-list>
-  
-        <ion-item>
-          <ion-label fixed>Full Name</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-  
-        <ion-item>
-          <ion-label fixed>Email</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-    
-        <ion-item>
-          <ion-label fixed>Password</ion-label>
-          <ion-input type="password"></ion-input>
-        </ion-item>
-    
-      </ion-list>
-    
-      <div padding>
-        <button ion-button color="primary" block (click)="navigateToLanding()">Login</button>
-      </div>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+</head>
+
+<ion-content style="background-color: rgb(204, 203, 203);" padding>
+
+    <ion-row style="height:20rem"></ion-row>
+
+
+    <div style="border:red 2px dashed" class="centerbox colorbox" padding>
+        <p style="font-family: 'Lobster'"> Completely unsecure login.</p>
+
+        <ion-list class="widthbox">
+
+            <ion-item>
+                <ion-input [(ngModel)]="email" type="text" placeholder="Username"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+              </ion-item>
+
+        </ion-list>
+
+        <button ion-button (click)="navigateToLanding()" full>Login</button>
+    </div>
+
 
 </ion-content>
