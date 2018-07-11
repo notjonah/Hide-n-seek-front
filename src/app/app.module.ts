@@ -33,7 +33,7 @@ import { HttpModule } from "@angular/http";
     LoginPage, 
     LandingPage, 
     MapPage,
-    PaymentPage
+    PaymentPage,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +50,7 @@ import { HttpModule } from "@angular/http";
     LoginPage,
     LandingPage,
     MapPage, 
-    PaymentPage
+    PaymentPage,
   ],
   providers: [
     StatusBar,
