@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { PaymentPage } from '../payment/payment';
+import { LandingPage } from '../landing/landing';
 
      
      @Component({
@@ -99,9 +100,9 @@ import { PaymentPage } from '../payment/payment';
        }
 
 
-    navigateToPayment() {
+    navigateToLanding() {
         console.log("Navigating...")
-        this.navCtrl.push(PaymentPage)
+        this.navCtrl.push(LandingPage)
     }
 
     }
