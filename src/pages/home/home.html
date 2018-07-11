@@ -6,15 +6,22 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  Hello!
-  <p>
-    Welcome to Hide n Seek!
-  </p>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
 
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+</head>
+
+
+<ion-content padding>
+  <p class="centerbox colorbox" style="font-family: 'Lobster'; font-size: 10em; position: centered;"> Welcome to Hide n Seek! </p>
   <div padding>
-      <button ion-button color="primary" block (click)="navigateToLogin()">Sign In</button>
-      <button ion-button color="primary" block (click)="navigateToRegistration()">Sign Up</button>
-      <button ion-button color="primary" block (click)="navigateToPayment()">Payment</button>
+
+
+      <button ion-button color="primary" block (click)="navigateToLogin()">Login</button>
+      <button ion-button color="primary" block (click)="navigateToRegister()">Register</button>
     </div>
 </ion-content>
