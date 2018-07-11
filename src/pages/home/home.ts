@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { RegistrationPage } from '../registration/registration';
 import { LoginPage } from '../login/login';
+import { TimerPage } from '../timer/timer';
+
 
 @Component({
   selector: 'page-home',
@@ -10,7 +12,12 @@ import { LoginPage } from '../login/login';
 })
 export class HomePage {
 
+  @ViewChild('timer') timer: TimerPage;
+
   constructor(public navCtrl: NavController) {
+    setTimeout(() => {
+      this.timer.startTimer();
+    }, 1000)
   }
   navigateToRegistration() {
     console.log("Navigating...");
@@ -22,4 +29,3 @@ export class HomePage {
     this.navCtrl.push(LoginPage)
   }
 }
-  
