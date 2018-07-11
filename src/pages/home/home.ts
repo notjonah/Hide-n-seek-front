@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LandingPage } from '../landing/landing';
+
+import { RegistrationPage } from '../registration/registration';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -10,10 +12,14 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
   }
-
-  navigateToLanding() {
-    console.log("Navigating...")
-    this.navCtrl.push(LandingPage)
+  navigateToRegistration() {
+    console.log("Navigating...");
+    this.navCtrl.push(RegistrationPage);
   }
+  navigateToLogin() {
+    console.log("Navigating...");
 
+    this.navCtrl.push(LoginPage)
+  }
 }
+  

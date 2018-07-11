@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { MapPage } from '../map/map';
 /**
  * Generated class for the LandingPage page.
  *
@@ -16,6 +16,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class LandingPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+  navigateToMap() {
+    console.log("Navigating...");
+    this.navCtrl.push(MapPage)
   }
 
   ionViewDidLoad() {

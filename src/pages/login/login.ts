@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 
+import { LandingPage } from '../landing/landing';
+
      
      @Component({
        selector: "page-login",
@@ -97,15 +99,10 @@ import { Http } from '@angular/http';
          // }
        }
 
-    navigateToLogin() {
+    navigateToLanding() {
         console.log("Navigating...");
+        this.navCtrl.push(LandingPage);
     }
-
-    navigateToFront() {
-        console.log("Navigating...")
-        this.navCtrl.push("")
-    }
-
-    }
+  }
 
 
