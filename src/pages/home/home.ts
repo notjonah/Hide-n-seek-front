@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 
 import { RegistrationPage } from '../registration/registration';
 import { LoginPage } from '../login/login';
+import { PaymentPage } from '../payment/payment';
 
 @Component({
   selector: 'page-home',
@@ -20,6 +21,11 @@ export class HomePage {
     console.log("Navigating...");
 
     this.navCtrl.push(LoginPage)
+  }
+  navigateToPayment() {
+    console.log("Navigating...");
+
+    this.navCtrl.push(PaymentPage)
   }
 }
   
