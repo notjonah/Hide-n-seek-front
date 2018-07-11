@@ -37,9 +37,16 @@ import { HttpModule } from "@angular/http";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
     ComponentsModule,
     HttpModule,
+    IonicModule.forRoot(MyApp, {}, { links: [
+      { component: LoginPage, name: "login", segment: "login"},
+      { component: HomePage, name: "home", segment: "home" },
+      { component: LandingPage, name: "landing", segment: "landing"},
+      { component: PaymentPage, name: "payment", segment: "payment"},
+      { component: MapPage, name: "map", segment: "map"},
+      { component: RegistrationPage, name: "registration", segment: "registration" }]})
+
   
   ],
   bootstrap: [IonicApp],
