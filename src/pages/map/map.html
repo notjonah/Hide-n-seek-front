@@ -7,12 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>map</ion-title>
+    <ion-title>Map</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+
+  <timer #timer [timeInSeconds]="30"></timer>
+
 <app-bing-map></app-bing-map>
 <ion-content padding>
   <button ion-button block menuToggle>Toggle Menu</button>

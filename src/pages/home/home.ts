@@ -1,10 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { RegistrationPage } from '../registration/registration';
 import { LoginPage } from '../login/login';
 import { PaymentPage } from '../payment/payment';
-import { TimerPage } from '../timer/timer';
 
 
 @Component({
@@ -13,12 +12,7 @@ import { TimerPage } from '../timer/timer';
 })
 export class HomePage {
 
-  @ViewChild('timer') timer: TimerPage;
-
   constructor(public navCtrl: NavController) {
-    setTimeout(() => {
-      this.timer.startTimer();
-    }, 1000)
   }
   navigateToRegistration() {
     console.log("Navigating...");

@@ -1,5 +1,5 @@
 ///<reference path="../../../node_modules/bingmaps/types/MicrosoftMaps/Microsoft.Maps.All.d.ts" />
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {
   IonicPage,
   NavController,
@@ -7,7 +7,7 @@ import {
 } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
-
+import { TimerPage } from '../timer/timer';
 
 /**
  * Generated class for the MapPage page.
@@ -24,7 +24,12 @@ import { HomePage } from '../home/home';
 
 export class MapPage {
 
+  @ViewChild('timer') timer: TimerPage;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    setTimeout(() => {
+      this.timer.startTimer();
+    }, 1000)
   }
   navigateToHome() {
     console.log("Navigating...");
