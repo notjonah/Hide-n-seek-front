@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 
+
 import { HomePage } from '../home/home';
+import { MapPage } from '../map/map';
+import { LandingPage } from '../landing/landing';
 
 @Component({
     selector: 'page-registration',
@@ -15,14 +18,16 @@ export class RegistrationPage {
     public email: string;
     public password: string;
     public confirmpassword: string;
-    public complexObject: any;
-    public flag: boolean = true;
+ 
 
     constructor(public navCtrl: NavController, public http: Http) {}
 
     registration() {
         this.http
-          .post("http://localhost:3000/login", {
+          .post("http://localhost:3000/registration", {
+            firstname:this.firstname ,
+            lastname: this.lastname ,
+            username:this.username,
             email: this.email,
             password: this.password
           })
@@ -36,6 +41,7 @@ export class RegistrationPage {
               localStorage.setItem("TOKEN", token);
     
               let t = localStorage.getItem("TOKEN");
+              this.navCtrl.push(LandingPage,t)
             },
     
             err => {
