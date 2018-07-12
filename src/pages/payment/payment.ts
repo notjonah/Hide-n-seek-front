@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
 @IonicPage()
 
 @Component({ 
-  selector: 'page-paymnet',
+  selector: 'page-payment',
   templateUrl: 'payment.html',
  })
 

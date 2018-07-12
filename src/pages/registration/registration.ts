@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
-
-import { HomePage } from '../home/home';
+import { MapPage } from '../map/map';
+import { LandingPage } from '../landing/landing';
 
 @Component({
     selector: 'page-registration',
@@ -44,9 +44,9 @@ export class RegistrationPage {
           );
       }
 
-    navigateToHome() {
+    navigateToLanding() {
         console.log("Navigating...")
-        this.navCtrl.push("HomePage")
+        this.navCtrl.push(LandingPage)
     }
 
 }

@@ -14,6 +14,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
   }
+  
   navigateToRegistration() {
     console.log("Navigating...");
     this.navCtrl.push(RegistrationPage);
