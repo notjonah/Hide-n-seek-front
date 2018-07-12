@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from "@angular/core";
 import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
-
 import { MyApp } from "./app.component";
 import { HomePage } from "../pages/home/home";
 import { RegistrationPage } from "../pages/registration/registration";
@@ -13,7 +12,7 @@ import { BingMapsLoader } from "../providers/bing-maps/bing-map.service";
 import { MapPage } from "../pages/map/map";
 import { PaymentPage } from "../pages/payment/payment";
 import { ComponentsModule } from "../components/components.module";
-import { TimerComponent } from "../pages/timer/timer";
+import { TimerPage } from "../pages/timer/timer";
 
 
 import { HttpModule } from "@angular/http";
@@ -37,7 +36,9 @@ import { HttpModule } from "@angular/http";
     LandingPage, 
     MapPage,
     PaymentPage,
+    TimerPage,
   ],
+
   imports: [
     BrowserModule,
     ComponentsModule,
@@ -57,13 +58,14 @@ import { HttpModule } from "@angular/http";
     MyApp,
     HomePage,
     MapPage,
-    TimerComponent
+    TimerPage,
     RegistrationPage,
     LoginPage,
     LandingPage,
     MapPage, 
     PaymentPage,
   ],
+
   providers: [
     StatusBar,
     SplashScreen,
