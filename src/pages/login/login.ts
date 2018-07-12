@@ -21,11 +21,11 @@ import { LandingPage } from '../landing/landing';
        public flag: boolean = true;
      
        constructor(public navCtrl: NavController, private http: Http) {
-         this.email = "miki@ixperience.co.za";
+         this.email = "";
      
          this.names = [];
      
-         this.names = ["miki", "perry", "sabreena"];
+         this.names = [];
      
          this.names.push("Erich");
      
