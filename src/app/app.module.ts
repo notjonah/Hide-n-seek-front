@@ -13,6 +13,9 @@ import { BingMapsLoader } from "../providers/bing-maps/bing-map.service";
 import { MapPage } from "../pages/map/map";
 import { PaymentPage } from "../pages/payment/payment";
 import { ComponentsModule } from "../components/components.module";
+import { TimerComponent } from "../pages/timer/timer";
+
+
 import { HttpModule } from "@angular/http";
 
 // import {
@@ -53,6 +56,8 @@ import { HttpModule } from "@angular/http";
   entryComponents: [
     MyApp,
     HomePage,
+    MapPage,
+    TimerComponent
     RegistrationPage,
     LoginPage,
     LandingPage,

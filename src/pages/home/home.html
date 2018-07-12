@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Home
+      "Hide n Seek" Ready to start game?
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -17,6 +17,18 @@
 
 
 <ion-content padding>
+  Hello!
+  <p>
+    Welcome to Hide n Seek!
+  </p>
+
+  <timer #timer [timeInSeconds]="30"></timer>
+
+  <div padding>
+      <button ion-button color="primary" block (click)="navigateToLogin()">Sign In</button>
+      <button ion-button color="primary" block (click)="navigateToRegistration()">Sign Up</button>
+  <div id="container">
+  <p class="centerbox colorbox" style="font-family: 'Lobster'; font-size: 10em; position: centered;"> Welcome to Hide n Seek! </p>
   <div>
     <p>
       <a href="MY WEBSITE LINK" target="_blank">
@@ -29,4 +41,5 @@
       <button ion-button color="primary" block (click)="navigateToLogin()">Login</button>
       <button ion-button color="primary" block (click)="navigateToRegistration()">Register</button>
     </div>
+
 </ion-content>
