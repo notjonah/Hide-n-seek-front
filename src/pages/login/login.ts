@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, } from 'ionic-angular';
 import { Http } from '@angular/http';
-import { PaymentPage } from '../payment/payment';
 import { LandingPage } from '../landing/landing';
 
 
@@ -17,9 +16,16 @@ export class LoginPage {
   
   }
 
+  // login() {
+  //   this.http
+  //     .post("http://localhost:3000/login", {
+  //       email: this.email,
+  //       password: this.password
+  //     })
+
   login() {
     this.http
-      .post("http://localhost:3000/login", {
+      .post("http://hide-n-seek-mobile.herokuapp.com/login", {
         email: this.email,
         password: this.password
       })

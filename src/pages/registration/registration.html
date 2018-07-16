@@ -1,49 +1,39 @@
-<ion-header>
-    <ion-navbar>
-      <ion-title style="text-align: center; font-size: 100px; font-family: 'Sigmar One', cursive;">
-        Register Now!
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content style="background-color: rgb(204, 203, 203);" padding>
-    <ion-row style="height:10rem"></ion-row>
-  
-    <div class="centerbox colorbox" padding>
-      <p style="font-family: 'Lobster'"> Register now for a free cookie.</p>
-      <ion-list class="centerbox">
-  
-        <ion-item>
-          <ion-input type="text" [(ngModel)]="firstname" placeholder="First Name">First Name</ion-input>
-        </ion-item>
-  
-        <ion-item>
-          <ion-input type="text" [(ngModel)]="lastname" placeholder="Last Name">Last Name</ion-input>
-        </ion-item>
-  
-        <ion-item>
-          <ion-input type="text" [(ngModel)]="username" placeholder="Username">Username</ion-input>
-        </ion-item>
-  
-        <ion-item>
-          <ion-input type="text"[(ngModel)]="email" placeholder="Email">Email</ion-input>
-        </ion-item>
-  
-  
-        <ion-item>
-          <ion-input type="password"[(ngModel)]="password" placeholder="Password">Password</ion-input>
-        </ion-item>
-  
-        <ion-item>
-          <ion-input type="password" placeholder="Confirm Password">Password</ion-input>
-        </ion-item>
-  
-      </ion-list>
-  
-      <button ion-button (click)="registration()" full>REGISTER!</button>
-  
-    </div>
-  
-  </ion-content>
-  
-  
+
+        <ion-header>
+          <ion-navbar>
+              <ion-title>
+                  Register
+              </ion-title>
+          </ion-navbar>
+      </ion-header>
+      
+      <ion-content padding style="background-color: aliceblue">
+          <p style="font-size: 20px; text-align: center">Welcome to the fun.</p>
+      
+          <ion-list>
+        
+              <ion-item>
+                  <ion-input [(ngModel)]='firstname' type="text" placeholder="First Name"></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                  <ion-input [(ngModel)]='lastname' type="text" placeholder="Last Name"></ion-input>
+              </ion-item>
+      
+              <ion-item>
+                <ion-input [(ngModel)]='email' type="email" placeholder="Email"></ion-input>
+              </ion-item>
+            
+              <ion-item>
+                <ion-input [(ngModel)]='password' type="password" placeholder="Password"></ion-input>
+              </ion-item>
+      
+              <ion-item>
+                  <ion-input [(ngModel)]='confirmpassword' type="password" placeholder="Comfirm Password"></ion-input>
+              </ion-item>
+            
+          </ion-list>
+      
+          <button ion-button (click)="registration()">Register</button>
+      
+      </ion-content>

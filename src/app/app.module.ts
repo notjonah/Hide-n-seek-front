@@ -16,6 +16,7 @@ import { TimerPage } from "../pages/timer/timer";
 
 
 import { HttpModule } from "@angular/http";
+import { MapsPage } from "../pages/maps/maps";
 
 // import {
 //   MapModule,
@@ -37,6 +38,7 @@ import { HttpModule } from "@angular/http";
     MapPage,
     PaymentPage,
     TimerPage,
+    MapsPage
   ],
 
   imports: [
@@ -49,6 +51,7 @@ import { HttpModule } from "@angular/http";
       { component: LandingPage, name: "landing", segment: "landing"},
       { component: PaymentPage, name: "payment", segment: "payment"},
       { component: MapPage, name: "map", segment: "map"},
+      { component: MapsPage, name: "maps", segment: "maps"},
       { component: RegistrationPage, name: "registration", segment: "registration" }]})
 
   
@@ -64,6 +67,7 @@ import { HttpModule } from "@angular/http";
     LandingPage,
     MapPage, 
     PaymentPage,
+    MapsPage
   ],
 
   providers: [

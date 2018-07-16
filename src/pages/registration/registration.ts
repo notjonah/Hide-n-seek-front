@@ -1,62 +1,53 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 import { Http } from '@angular/http';
-import { MapPage } from '../map/map';
-import { LandingPage } from '../landing/landing';
 
-
-import { HomePage } from '../home/home';
-import { MapPage } from '../map/map';
-import { LandingPage } from '../landing/landing';
 
 @Component({
-    selector: 'page-registration',
-    templateUrl: 'registration.html'
+  selector: 'page-registration',
+  templateUrl: 'registration.html'
 })
 export class RegistrationPage {
-    public firstname: string;
-    public lastname: string;
-    public username: string;
-    public email: string;
-    public password: string;
-    public confirmpassword: string;
- 
 
-    constructor(public navCtrl: NavController, public http: Http) {}
+  public email: string;
+  public firstname: string;
+  public lastname: string;
+  public password: string;
+  public confirmpassword: string;
+  public phone: string;
+  
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public http: Http) {
 
-    registration() {
-        this.http
-          .post("http://localhost:3000/registration", {
-            firstname:this.firstname ,
-            lastname: this.lastname ,
-            username:this.username,
-            email: this.email,
-            password: this.password
-          })
-          .subscribe(
-            result => {
-              console.log(result);
-    
-              var jwtResponse = result.json();
-              var token = jwtResponse.token;
-    
-              localStorage.setItem("TOKEN", token);
-    
-              let t = localStorage.getItem("TOKEN");
-              this.navCtrl.push(LandingPage,t)
-            },
-    
-            err => {
-              console.log(err);
-            }
-          );
+  }
+
+  registration() {
+    this.http.post('http://hide-n-seek-mobile.herokuapp.com/registration', {
+      firstname: this.firstname,
+      lastname: this.lastname,
+      email: this.email,
+      password: this.password,
+      confirmpassword: this.confirmpassword,
+      phone: this.phone
+
+    }).subscribe(
+      result => {
+        console.log(result);
+        this.navCtrl.push(LoginPage);
+      },
+      err => {
+        console.log(err);
       }
+    )
+  }
 
-    navigateToLanding() {
-        console.log("Navigating...")
-        this.navCtrl.push(LandingPage)
-    }
+  navigateToLogin() {
+    console.log("Navigating to LoginPage...");
+
+    this.navCtrl.push(LoginPage);
+  }
 
 }
-
-
