@@ -25,7 +25,7 @@ export class RegistrationPage {
   }
 
   registration() {
-    this.http.post('http://hide-n-seek-mobile.herokuapp.com/registration', {
+    this.http.post('https://hide-n-seek-mobile.herokuapp.com/registration', {
       firstname: this.firstname,
       lastname: this.lastname,
       email: this.email,

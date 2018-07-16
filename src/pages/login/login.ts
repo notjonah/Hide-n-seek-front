@@ -25,7 +25,7 @@ export class LoginPage {
 
   login() {
     this.http
-      .post("http://hide-n-seek-mobile.herokuapp.com/login", {
+      .post("https://hide-n-seek-mobile.herokuapp.com/login", {
         email: this.email,
         password: this.password
       })
