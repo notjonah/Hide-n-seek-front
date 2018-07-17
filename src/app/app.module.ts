@@ -9,7 +9,6 @@ import { RegistrationPage } from "../pages/registration/registration";
 import { LoginPage } from "../pages/login/login";
 import { LandingPage } from "../pages/landing/landing";
 import { BingMapsLoader } from "../providers/bing-maps/bing-map.service";
-import { MapPage } from "../pages/map/map";
 import { PaymentPage } from "../pages/payment/payment";
 import { ComponentsModule } from "../components/components.module";
 import { TimerPage } from "../pages/timer/timer";
@@ -17,6 +16,10 @@ import { TimerPage } from "../pages/timer/timer";
 
 import { HttpModule } from "@angular/http";
 import { MapsPage } from "../pages/maps/maps";
+import { Game1Page } from "../pages/game1/game1";
+import { Game2Page } from "../pages/game2/game2";
+import { Game3Page } from "../pages/game3/game3";
+import { Game4Page } from "../pages/game4/game4";
 
 // import {
 //   MapModule,
@@ -35,10 +38,13 @@ import { MapsPage } from "../pages/maps/maps";
     RegistrationPage, 
     LoginPage, 
     LandingPage, 
-    MapPage,
     PaymentPage,
     TimerPage,
-    MapsPage
+    MapsPage, 
+    Game1Page,
+    Game2Page,
+    Game3Page,
+    Game4Page
   ],
 
   imports: [
@@ -50,8 +56,11 @@ import { MapsPage } from "../pages/maps/maps";
       { component: HomePage, name: "home", segment: "home" },
       { component: LandingPage, name: "landing", segment: "landing"},
       { component: PaymentPage, name: "payment", segment: "payment"},
-      { component: MapPage, name: "map", segment: "map"},
       { component: MapsPage, name: "maps", segment: "maps"},
+      { component: Game1Page, name: "gameone", segment: "gameone"},
+      { component: Game2Page, name: "gametwo", segment: "gametwo"},
+      { component: Game3Page, name: "gamethree", segment: "gamethree"},
+      { component: Game3Page, name: "gamefour", segment: "gamefour"},
       { component: RegistrationPage, name: "registration", segment: "registration" }]})
 
   
@@ -60,14 +69,16 @@ import { MapsPage } from "../pages/maps/maps";
   entryComponents: [
     MyApp,
     HomePage,
-    MapPage,
     TimerPage,
     RegistrationPage,
     LoginPage,
     LandingPage,
-    MapPage, 
     PaymentPage,
-    MapsPage
+    MapsPage,
+    Game1Page,
+    Game2Page,
+    Game3Page,
+    Game4Page
   ],
 
   providers: [

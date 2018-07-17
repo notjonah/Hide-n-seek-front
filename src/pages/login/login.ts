@@ -37,7 +37,7 @@ export class LoginPage {
           console.log(token);
           localStorage.setItem("TOKEN", token);
 
-          let t = localStorage.getItem("TOKEN");
+         // let t = localStorage.getItem("TOKEN");
 
           this.navCtrl.push(LandingPage);
         },
