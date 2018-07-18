@@ -3,7 +3,6 @@ import { NavController } from 'ionic-angular';
 
 import { RegistrationPage } from '../registration/registration';
 import { LoginPage } from '../login/login';
-import { PaymentPage } from '../payment/payment';
 
 
 @Component({

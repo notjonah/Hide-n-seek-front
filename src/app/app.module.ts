@@ -1,5 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { ErrorHandler, NgModule, ApplicationRef } from "@angular/core";
+import { ErrorHandler, NgModule } from "@angular/core";
 import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
@@ -11,14 +11,12 @@ import { LandingPage } from "../pages/landing/landing";
 import { PaymentPage } from "../pages/payment/payment";
 import { ComponentsModule } from "../components/components.module";
 import { TimerPage } from "../pages/timer/timer";
-
-
-import { HttpModule } from "@angular/http";
 import { MapsPage } from "../pages/maps/maps";
 import { Game1Page } from "../pages/game1/game1";
 import { Game2Page } from "../pages/game2/game2";
 import { Game3Page } from "../pages/game3/game3";
 import { Game4Page } from "../pages/game4/game4";
+import { Http, HttpModule } from '@angular/http';
 
 // import {
 //   MapModule,
@@ -43,12 +41,13 @@ import { Game4Page } from "../pages/game4/game4";
     Game1Page,
     Game2Page,
     Game3Page,
-    Game4Page
+    Game4Page, 
   ],
 
   imports: [
     BrowserModule,
     ComponentsModule,
+    HttpModule,
 
     
     IonicModule.forRoot(MyApp, {}, { links: [
