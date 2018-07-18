@@ -8,7 +8,6 @@ import { HomePage } from "../pages/home/home";
 import { RegistrationPage } from "../pages/registration/registration";
 import { LoginPage } from "../pages/login/login";
 import { LandingPage } from "../pages/landing/landing";
-import { BingMapsLoader } from "../providers/bing-maps/bing-map.service";
 import { PaymentPage } from "../pages/payment/payment";
 import { ComponentsModule } from "../components/components.module";
 import { TimerPage } from "../pages/timer/timer";
