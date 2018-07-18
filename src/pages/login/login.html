@@ -15,27 +15,27 @@
 
 </head>
 
-<ion-content style="background-color: rgb(204, 203, 203);" padding>
+<ion-content style="background-color: rgb (204, 203, 203);" padding>
 
     <ion-row style="height:20rem"></ion-row>
 
 
-    <div class="centerbox colorbox" padding>
+    <div style="border: black 2px" class="centerbox colorbox" padding>
         <p style="font-family: 'Lobster'; color: black"> Secured by Billy®</p>
 
         <ion-list class="widthbox">
 
             <ion-item>
-                <ion-input [(ngModel)]="email" type="text" color="light" round placeholder="Username"></ion-input>
+                <ion-input [(ngModel)]="email" type="text" placeholder="Username"></ion-input>
               </ion-item>
 
               <ion-item>
-                <ion-input [(ngModel)]="password" type="password" color="light" round placeholder="Password"></ion-input>
+                <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
               </ion-item>
 
         </ion-list>
 
-        <button ion-button (click)="login()" full>Login</button>
+        <button ion-button full color="tertiary" (click)="login()" full>Login</button>
     </div>
 
 

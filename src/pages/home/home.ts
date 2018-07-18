@@ -23,10 +23,6 @@ export class HomePage {
     console.log("Navigating...");
 
     this.navCtrl.push(LoginPage)
-  }
-  navigateToPayment() {
-    console.log("Navigating...");
 
-    this.navCtrl.push(PaymentPage)
   }
 }
