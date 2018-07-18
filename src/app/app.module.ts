@@ -1,9 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { ErrorHandler, NgModule } from "@angular/core";
+import { ErrorHandler, NgModule, ApplicationRef } from "@angular/core";
 import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
-import { MyApp } from "./app.component";
+import { MyApp, AppComponent } from "./app.component";
 import { HomePage } from "../pages/home/home";
 import { RegistrationPage } from "../pages/registration/registration";
 import { LoginPage } from "../pages/login/login";
@@ -20,6 +20,9 @@ import { Game1Page } from "../pages/game1/game1";
 import { Game2Page } from "../pages/game2/game2";
 import { Game3Page } from "../pages/game3/game3";
 import { Game4Page } from "../pages/game4/game4";
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 // import {
 //   MapModule,
@@ -50,7 +53,12 @@ import { Game4Page } from "../pages/game4/game4";
   imports: [
     BrowserModule,
     ComponentsModule,
+    CommonModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR_KEY' }),
     HttpModule,
+    FormsModule,
+    
     IonicModule.forRoot(MyApp, {}, { links: [
       { component: LoginPage, name: "login", segment: "login"},
       { component: HomePage, name: "home", segment: "home" },
@@ -84,11 +92,12 @@ import { Game4Page } from "../pages/game4/game4";
   providers: [
     StatusBar,
     SplashScreen,
-    BingMapsLoader,
 
     { provide: ErrorHandler, useClass: IonicErrorHandler },
    
 
-  ]
+  ],
+  declarations: [ AppComponent ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
