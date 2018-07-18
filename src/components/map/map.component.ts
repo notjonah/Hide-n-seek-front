@@ -1,8 +1,5 @@
 
 import { Component, ViewChild } from '@angular/core';
-import { MarkerTypeId, IMapOptions, IBox, IMarkerIconInfo } from 'angular-maps';
-import { google } from '../../../node_modules/angular-maps/dist/src/services/google/google-map-types';
- 
  
 @Component({
   templateUrl: 'map.component.html'

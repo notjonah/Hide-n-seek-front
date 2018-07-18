@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { MapModule, MapAPILoader, WindowRef, DocumentRef, GoogleMapAPILoaderConfig, GoogleMapAPILoader, MapComponent } from "angular-maps";
 
 @NgModule({
 	declarations: [MapComponent],
