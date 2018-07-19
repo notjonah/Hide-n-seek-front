@@ -8,6 +8,7 @@ import { TimerComponent } from '../timer/timer';
   templateUrl: 'maps.html'
 })
 export class MapsPage implements OnInit {
+  splash = true;
 
   @ViewChild(TimerComponent) timer: TimerComponent;
 
@@ -50,6 +51,7 @@ export class MapsPage implements OnInit {
       }
     )
   }
+
   ngOnInit() {
     // Wait for the google maps script to be loaded before using the "google" keyword
     this.loader.load().then(() => {

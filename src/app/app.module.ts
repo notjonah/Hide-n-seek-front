@@ -16,7 +16,6 @@ import { Game3Page } from "../pages/game3/game3";
 import { Game4Page } from "../pages/game4/game4";
 import { AgmCoreModule } from "../../node_modules/@agm/core";
 import { HttpModule } from '@angular/http';
-import { TimerPageModule } from "../pages/timer/timer.module";
 import { TimerComponent } from "../pages/timer/timer";
 
 // import {
@@ -64,7 +63,7 @@ import { TimerComponent } from "../pages/timer/timer";
       { component: Game1Page, name: "gameone", segment: "gameone"},
       { component: Game2Page, name: "gametwo", segment: "gametwo"},
       { component: Game3Page, name: "gamethree", segment: "gamethree"},
-      { component: Game3Page, name: "gamefour", segment: "gamefour"},
+      { component: Game4Page, name: "gamefour", segment: "gamefour"},
       { component: RegistrationPage, name: "registration", segment: "registration" }]})
 
   
@@ -82,7 +81,7 @@ import { TimerComponent } from "../pages/timer/timer";
     Game2Page,
     Game3Page,
     Game4Page,
-    TimerComponent
+    TimerComponent,
   ],
 
   providers: [
