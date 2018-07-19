@@ -50,7 +50,7 @@ import { Http, HttpModule } from '@angular/http';
     ComponentsModule,
     HttpModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD7PM5DW3wTPCJ6ITrT-CRZTkgFy1jLohk',
+      apiKey: '',
       libraries: ['geometry'],
       }),
      
