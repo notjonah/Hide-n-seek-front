@@ -34,4 +34,6 @@ export class Game1Page {
     console.log('ionViewDidLoad Game1Page');
   }
 
+  
+
 }
