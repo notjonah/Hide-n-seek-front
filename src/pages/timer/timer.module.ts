@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { TimerPage } from './timer';
+import { TimerComponent } from './timer';
 
 @NgModule({
   declarations: [
-    TimerPage,
+    TimerComponent,
   ],
   imports: [
-    IonicPageModule.forChild(TimerPage),
+    IonicPageModule.forChild(TimerComponent),
   ],
 })
 export class TimerPageModule {}

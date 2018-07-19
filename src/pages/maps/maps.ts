@@ -1,12 +1,16 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MapsAPILoader } from '../../../node_modules/@agm/core';
+import { AlertController } from 'ionic-angular';
+import { TimerComponent } from '../timer/timer';
 
 @Component({
   selector: 'maps-page',
   templateUrl: 'maps.html'
 })
 export class MapsPage implements OnInit {
+
+  @ViewChild(TimerComponent) timer: TimerComponent;
+
   area;
 
   userLocation = {
@@ -37,7 +41,7 @@ export class MapsPage implements OnInit {
   inside = { lat: -33.90459, lng: 18.41994 }
   outside = { lat: -33.90718, lng: 18.41815 }
 
-  constructor(private loader: MapsAPILoader) {
+  constructor(private loader: MapsAPILoader, private alertCtrl: AlertController) {
     console.log('MAPS IS HERE')
     navigator.geolocation.getCurrentPosition((position) =>
       this.userLocation = {
@@ -60,16 +64,27 @@ export class MapsPage implements OnInit {
       });
     });
 
+    
 
     // Create a LatLng using the position returned from the pusher event
     const latLng = new google.maps.LatLng(this.outside.lat, this.outside.lng);
     setTimeout(() => {
       if (!google.maps.geometry.poly.containsLocation(latLng, this.area)) {
         // Show alert if user has left the polygon
-        alert('Outside');
+  
+          let alert = this.alertCtrl.create({
+            title: 'Please enter the game boundaries!',
+            subTitle: 'You are out of bounds.',
+            buttons: ['Ok']
+          });
+          alert.present();
+        this.timer.initTimer()        
+        
 
       } else {
-        alert('Inside');
+
+          this.timer.startTimer();
+       
       }
     }, 1000);
 

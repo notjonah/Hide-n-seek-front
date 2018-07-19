@@ -9,15 +9,15 @@ import { RegistrationPage } from "../pages/registration/registration";
 import { LoginPage } from "../pages/login/login";
 import { LandingPage } from "../pages/landing/landing";
 import { PaymentPage } from "../pages/payment/payment";
-import { ComponentsModule } from "../components/components.module";
-import { TimerPage } from "../pages/timer/timer";
 import { MapsPage } from "../pages/maps/maps";
 import { Game1Page } from "../pages/game1/game1";
 import { Game2Page } from "../pages/game2/game2";
 import { Game3Page } from "../pages/game3/game3";
 import { Game4Page } from "../pages/game4/game4";
 import { AgmCoreModule } from "../../node_modules/@agm/core";
-import { Http, HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
+import { TimerPageModule } from "../pages/timer/timer.module";
+import { TimerComponent } from "../pages/timer/timer";
 
 // import {
 //   MapModule,
@@ -37,20 +37,19 @@ import { Http, HttpModule } from '@angular/http';
     LoginPage, 
     LandingPage, 
     PaymentPage,
-    TimerPage,
     MapsPage, 
     Game1Page,
     Game2Page,
     Game3Page,
     Game4Page, 
+    TimerComponent,
   ],
 
   imports: [
     BrowserModule,
-    ComponentsModule,
     HttpModule,
     AgmCoreModule.forRoot({
-      apiKey: '',
+      apiKey: 'AlzaSyD7PM5DW3wTPCJ6ITrT-CRZTkgFy1jLohk',
       libraries: ['geometry'],
       }),
      
@@ -74,7 +73,6 @@ import { Http, HttpModule } from '@angular/http';
   entryComponents: [
     MyApp,
     HomePage,
-    TimerPage,
     RegistrationPage,
     LoginPage,
     LandingPage,
@@ -83,12 +81,13 @@ import { Http, HttpModule } from '@angular/http';
     Game1Page,
     Game2Page,
     Game3Page,
-    Game4Page
+    Game4Page,
+    TimerComponent
   ],
 
   providers: [
     StatusBar,
-    SplashScreen,,
+    SplashScreen,
 
     { provide: ErrorHandler, useClass: IonicErrorHandler },
    
