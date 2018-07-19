@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './map/map.component';
+
 
 @NgModule({
-	 providers:
-		[
-
-		]
+	declarations: [MapComponent],
+	imports: [ ],
+	exports: [MapComponent]
+	, providers:
+		[]
 })
 export class ComponentsModule { }
+

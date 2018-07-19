@@ -16,6 +16,7 @@ import { Game1Page } from "../pages/game1/game1";
 import { Game2Page } from "../pages/game2/game2";
 import { Game3Page } from "../pages/game3/game3";
 import { Game4Page } from "../pages/game4/game4";
+import { AgmCoreModule } from "../../node_modules/@agm/core";
 import { Http, HttpModule } from '@angular/http';
 
 // import {
@@ -48,6 +49,11 @@ import { Http, HttpModule } from '@angular/http';
     BrowserModule,
     ComponentsModule,
     HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD7PM5DW3wTPCJ6ITrT-CRZTkgFy1jLohk',
+      libraries: ['geometry'],
+      }),
+     
 
     
     IonicModule.forRoot(MyApp, {}, { links: [

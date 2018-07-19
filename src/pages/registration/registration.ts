@@ -10,12 +10,13 @@ import { Http } from '@angular/http';
 })
 export class RegistrationPage {
 
-  public email: string;
-  public firstname: string;
-  public lastname: string;
-  public password: string;
-  public confirmpassword: string;
-  public phone: string;
+  private email: string;
+  private username:string;
+  private firstname: string;
+  private lastname: string;
+  private password: string;
+  private confirmpassword: string;
+  private phone: string;
   
   constructor(
     public navCtrl: NavController,
@@ -31,7 +32,8 @@ export class RegistrationPage {
       email: this.email,
       password: this.password,
       confirmpassword: this.confirmpassword,
-      phone: this.phone
+      phone: this.phone,
+      username:this.username
 
     }).subscribe(
       result => {
