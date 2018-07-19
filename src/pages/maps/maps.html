@@ -1,21 +1,24 @@
-<ion-header>
-    <ion-navbar>
-      <ion-title>
-        Map
-      </ion-title>
+
+<ion-header style="color: blue">
+<!--     
       <ion-buttons end>
-        <button ion-button (click)="setLocation()"><ion-icon name="add"></ion-icon> Set Boundary</button>
-      </ion-buttons>  
-    </ion-navbar>
+       <button ion-button (click)="setLocation()"><ion-icon name="add"></ion-icon> Set Boundary</button>
+      </ion-buttons>   -->
+    
+    <timer #timer timeInSeconds="3600"></timer>
   </ion-header>
   
+  
   <ion-content>
-    <agm-map #map style="height: 500px" [latitude]="center.lat" [longitude]="center.lng">
-      <agm-marker [latitude]="center.lat" [longitude]="center.lng" [markerDraggable]='true'></agm-marker>
+
+    <agm-map [latitude]="outside.lat" [longitude]="outside.lng" [zoom]='16'>
+      <agm-marker [latitude]="outside.lat" [longitude]="outside.lng" [markerDraggable]='true'></agm-marker>
       <agm-polygon [paths]='polygon'></agm-polygon>
       <!-- <agm-circle *ngIf="boundaryCenter" [latitude]="boundaryCenter.lat" [longitude]="boundaryCenter.lng" 
       [radius]="5000"
       [fillColor]="'red'">
   </agm-circle> -->
     </agm-map>
+
+  
 </ion-content> 

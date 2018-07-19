@@ -1,36 +1,30 @@
-import {Component} from '@angular/core';
-import { ITimer } from './itimer';
-
-
-
+import {Component, Input} from '@angular/core';
+import { ITimer} from './itimer';
+ 
+ 
 @Component({
     selector: 'timer',
-    templateUrl: 'timer.html',
-    inputs: ['timeInSeconds']
+    templateUrl: 'timer.html'
 })
-export class TimerPage {
-
-    timeInSeconds: number = 120;
-    // timeInSeconds: number;
+export class TimerComponent {
+ 
+    @Input() timeInSeconds: number;
     public timer: ITimer;
-
-    constructor(
-    ) {
-      this.initTimer();
+ 
+    constructor() {
     }
-
+ 
     ngOnInit() {
-        // this.initTimer();
+        this.initTimer();
     }
-
+ 
     hasFinished() {
         return this.timer.hasFinished;
     }
-
+ 
     initTimer() {
-        console.log(this.timeInSeconds)
         if(!this.timeInSeconds) { this.timeInSeconds = 0; }
-
+ 
         this.timer = <ITimer>{
             seconds: this.timeInSeconds,
             runTimer: false,
@@ -38,26 +32,25 @@ export class TimerPage {
             hasFinished: false,
             secondsRemaining: this.timeInSeconds
         };
-
+ 
         this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsRemaining);
     }
-
+ 
     startTimer() {
         this.timer.hasStarted = true;
         this.timer.runTimer = true;
         this.timerTick();
     }
-
+ 
     pauseTimer() {
         this.timer.runTimer = false;
     }
-
+ 
     resumeTimer() {
         this.startTimer();
     }
-
+ 
     timerTick() {
-        console.log('tick')
         setTimeout(() => {
             if (!this.timer.runTimer) { return; }
             this.timer.secondsRemaining--;
@@ -70,7 +63,7 @@ export class TimerPage {
             }
         }, 1000);
     }
-
+ 
     getSecondsAsDigitalClock(inputSeconds: number) {
         var sec_num = parseInt(inputSeconds.toString(), 10); // don't forget the second param
         var hours   = Math.floor(sec_num / 3600);

@@ -10,10 +10,15 @@ import { LoginPage } from '../login/login';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  splash = true;
 
   constructor(public navCtrl: NavController) {
   }
   
+  ionViewDidLoad() {
+    setTimeout(() => this.splash = false, 4100);
+  }
+
   navigateToRegistration() {
     console.log("Navigating...");
     this.navCtrl.push(RegistrationPage);
