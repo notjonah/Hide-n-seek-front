@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PaymentPage } from '../payment/payment';
+import { MapsPage } from '../maps/maps';
 
 /**
  * Generated class for the Game1Page page.
@@ -21,7 +22,7 @@ export class Game3Page {
 
   navigateToMap() {
     console.log("Navigating...");
-    this.navCtrl.push("map");
+    this.navCtrl.push(MapsPage);
   }
 
   navigateToPayment() {
