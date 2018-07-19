@@ -53,7 +53,7 @@ import { AgmCoreModule } from "../../node_modules/@agm/core";
     ComponentsModule,
     HttpModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD7PM5DW3wTPCJ6ITrT-CRZTkgFy1jLohk',
+      apiKey: '',
       libraries: ['geometry'],
       }),
      
