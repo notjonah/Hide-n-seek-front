@@ -88,7 +88,7 @@ import { Http, HttpModule } from '@angular/http';
 
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen,,
 
     { provide: ErrorHandler, useClass: IonicErrorHandler },
    
